@@ -60,6 +60,7 @@ pipeline {
             //  }
             when { 
                 expression { "$params.DEPLOY" == "true" }
+            }
             steps {
                 script{
                     sh """
