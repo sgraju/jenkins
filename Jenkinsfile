@@ -1,4 +1,5 @@
 pipeline {
+    // these are prerequisites
     agent {
         node {
             label 'AGENT-1'
