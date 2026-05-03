@@ -7,6 +7,9 @@ pipeline {
     environment {
         COURSE = "Jenkins AWS"
     }
+    options {
+        timeout(time : 10, unit: 'SECONDS')
+    }
     stages {
         stage('Build') {
             steps {
@@ -14,6 +17,7 @@ pipeline {
                     sh """
                          echo "Building"
                          echo $COURSE
+                         sleep 10
                          env
                     """
                 }
@@ -48,6 +52,9 @@ pipeline {
          }
          failure {
             echo 'I will run if failure'
+         }
+         aborted {
+            echo 'pipeline is aborted'
          }
     }
 }
