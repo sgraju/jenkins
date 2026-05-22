@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            lable 'AGENT-1'
+            label 'AGENT-1'
         }
     } 
     stages {
@@ -19,6 +19,11 @@ pipeline {
             steps {
                 echo "Deploying"
             }
+        }
+    }
+    post{
+        always{
+            echo "I will always say Hello again!"
         }
     }
 }
