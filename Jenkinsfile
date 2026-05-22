@@ -17,7 +17,7 @@ pipeline {
                     sh """
                         echo "Building declarative + scripted"
                         echo "$COURSE"
-                        sleep 10
+                      #  sleep 10
                     """
                 }
             }
