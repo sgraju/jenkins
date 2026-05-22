@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        echo "Building"
+                        echo "Building declarative + scripted"
                     """
                 }
             }
