@@ -5,7 +5,7 @@ pipeline {
         }
     } 
     environment {
-        COURSE = 'Jenkins'
+        COURSE = "Jenkins"
     }
     stages {
         stage('Build') { 
@@ -13,7 +13,7 @@ pipeline {
                 script {
                     sh """
                         echo "Building declarative + scripted"
-                        echo $COURSE
+                        echo "$COURSE"
                     """
                 }
             }
