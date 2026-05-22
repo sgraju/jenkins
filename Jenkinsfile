@@ -7,6 +7,9 @@ pipeline {
     environment {
         COURSE = "Jenkins"
     }
+    options {
+        timeout(time: 1, unit: 'HOURS')
+    }
     stages {
         stage('Build') { 
             steps {
@@ -42,7 +45,7 @@ pipeline {
             echo "I will always say Hello again!"
             cleanWs()
         }
-        success {
+        success{
             echo "I will run if success"
         }
         failure{
